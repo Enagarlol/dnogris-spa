@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Déjanos tu opinión · D'Nogris Spa</title>
+<meta name="description" content="¿Te encantó tu visita a D'Nogris Spa? Déjanos tu opinión.">
+<meta name="theme-color" content="#7B3470">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Página a la que llevan el QR y la etiqueta NFC de la base de reseñas.
+   Cuando exista el Perfil de Negocio de Google, pon su enlace en GOOGLE_RESENAS (abajo) y aparecerá como primera opción. */
+:root {
+  --bg: #FCF6F5; --bg-2: #F6E8EA; --ink: #3E1838; --ink-soft: #7A5672;
+  --plum: #7B3470; --magenta: #D62F7F; --gold: #BF953B; --line: #E9D6DA; --white: #FFFFFF;
+  --f-display: "Fraunces", Georgia, serif; --f-body: "Manrope", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 50% 0%, var(--bg-2), var(--bg) 60%); color: var(--ink); font-family: var(--f-body); font-size: 16.5px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+main { max-width: 460px; margin: 0 auto; padding: max(28px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) 40px max(20px, env(safe-area-inset-left)); text-align: center; }
+.logo { width: min(260px, 70%); height: auto; margin: 8px auto 18px; display: block; }
+h1 { font-family: var(--f-display); font-weight: 400; font-size: 34px; line-height: 1.1; letter-spacing: -.015em; margin: 0 0 8px; text-wrap: balance; }
+h1 em { color: var(--magenta); }
+.stars { color: var(--gold); font-size: 26px; letter-spacing: 6px; margin: 4px 0 14px; }
+p.lead { color: var(--ink-soft); margin: 0 0 26px; }
+.opts { display: grid; gap: 14px; text-align: left; }
+.opt { display: flex; gap: 14px; align-items: center; padding: 16px 18px; border-radius: 18px; background: var(--white); border: 1px solid var(--line); text-decoration: none; color: var(--ink); box-shadow: 0 10px 24px -18px rgba(62,24,56,.45); transition: transform .15s; }
+.opt:active { transform: scale(.98); }
+.opt:focus-visible { outline: 2px solid var(--magenta); outline-offset: 3px; }
+.opt .ic { flex: none; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: var(--white); font-weight: 700; font-size: 20px; }
+.opt b { display: block; font-size: 16.5px; }
+.opt span.s { display: block; font-size: 14px; color: var(--ink-soft); line-height: 1.4; }
+.opt.main { background: var(--plum); border-color: var(--plum); color: var(--white); }
+.opt.main span.s { color: #F1DCEA; }
+.how { margin-top: 22px; padding: 16px 18px; border-radius: 16px; background: var(--bg-2); text-align: left; font-size: 14.5px; color: var(--ink-soft); }
+.how b { color: var(--ink); }
+.how ol { margin: 6px 0 0; padding-left: 20px; }
+.back { display: inline-block; margin-top: 26px; color: var(--magenta); font-weight: 600; text-decoration: none; font-size: 14.5px; }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="img/logo-claro.png" alt="D'Nogris Spa">
+  <h1>¿Te encantó <em>tu visita?</em></h1>
+  <div class="stars" aria-hidden="true">★★★★★</div>
+  <p class="lead">Tu opinión nos ayuda a que más personas nos conozcan. Solo toma un minuto.</p>
+
+  <div class="opts" id="opts">
+    <a class="opt main" id="optGoogle" href="#" target="_blank" rel="noopener" hidden>
+      <span class="ic" style="background:#FFFFFF;color:#4285F4">G</span>
+      <span><b>Opinar en Google</b><span class="s">Califícanos con estrellas en Google Maps</span></span>
+    </a>
+    <a class="opt main" id="optFacebook" href="https://www.facebook.com/dnogrisspa" target="_blank" rel="noopener">
+      <span class="ic" style="background:#1877F2">f</span>
+      <span><b>Recomiéndanos en Facebook</b><span class="s">Se abre nuestra página; toca “Recomendaciones” o “Opiniones”</span></span>
+    </a>
+    <a class="opt" href="https://wa.me/529622865893?text=Hola%2C%20quiero%20dejar%20mi%20opini%C3%B3n%20sobre%20D%27Nogris%20Spa%3A%20" target="_blank" rel="noopener">
+      <span class="ic" style="background:#25D366">✓</span>
+      <span><b>Cuéntanos por WhatsApp</b><span class="s">Si prefieres, escríbenos directo qué te pareció</span></span>
+    </a>
+  </div>
+
+  <div class="how" id="howFb">
+    <b>En Facebook:</b>
+    <ol>
+      <li>Toca <b>Recomiéndanos en Facebook</b>.</li>
+      <li>En nuestra página, busca la pestaña <b>Opiniones</b> o <b>Recomendaciones</b> (a veces está en <b>Más</b>).</li>
+      <li>Elige <b>Sí</b> a “¿Recomiendas D'Nogris Spa?” y escribe unas palabras.</li>
+    </ol>
+  </div>
+
+  <a class="back" href="./">Ver servicios y precios →</a>
+</main>
+<script>
+  // Cuando exista el Perfil de Negocio de Google, pega aquí su enlace de reseñas (ej. https://g.page/r/XXXX/review)
+  const GOOGLE_RESENAS = "";
+  if (GOOGLE_RESENAS) {
+    const g = document.getElementById("optGoogle");
+    g.href = GOOGLE_RESENAS; g.hidden = false;
+    document.getElementById("optFacebook").classList.remove("main");
+    document.getElementById("howFb").hidden = true;
+  }
+</script>
+</body>
+</html>

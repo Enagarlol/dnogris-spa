@@ -1,4 +1,3 @@
-# Enlace fijo para el QR y la etiqueta NFC de reseñas.
-# Cuando exista el Perfil de Negocio de Google, cambia el destino por su enlace de reseñas.
-/resena https://www.facebook.com/dnogrisspa/reviews 302
-/opiniones https://www.facebook.com/dnogrisspa/reviews 302
+# El QR y la etiqueta NFC llevan a /resena (resena.html), una página propia con las opciones para opinar.
+# Cuando exista el Perfil de Negocio de Google, pon su enlace en GOOGLE_RESENAS dentro de resena.html.
+/opiniones /resena 301
