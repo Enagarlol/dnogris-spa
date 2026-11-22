@@ -1,3 +1,5 @@
-# El QR y la etiqueta NFC llevan a /resena (resena.html), una página propia con las opciones para opinar.
-# Cuando exista el Perfil de Negocio de Google, pon su enlace en GOOGLE_RESENAS dentro de resena.html.
-/opiniones /resena 301
+# El QR y la etiqueta NFC de la base llevan a /resena, que abre la página de Facebook para que la sigan.
+# Para cambiar el destino (por ejemplo, a Google), solo cambia la URL aquí; no hay que reimprimir.
+/resena https://www.facebook.com/dnogrisspa 302
+/opiniones https://www.facebook.com/dnogrisspa 302
+/facebook https://www.facebook.com/dnogrisspa 302
