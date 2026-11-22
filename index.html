@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>D'Nogris Spa · Estudio de belleza en Tapachula</title>
+<meta name="description" content="Spa en Tapachula, Chiapas: faciales con aparatología, tratamientos corporales, uñas, alaciado orgánico, cejas y pestañas. Agenda tu cita por WhatsApp al 962 286 5893.">
+<meta name="theme-color" content="#1F0C1D">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:title" content="D'Nogris Spa · Estudio de belleza en Tapachula">
+<meta property="og:description" content="Faciales, tratamientos corporales, uñas, cabello, cejas y pestañas. Agenda por WhatsApp: 962 286 5893.">
+<meta property="og:image" content="https://dnogris-spa.pages.dev/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* D'Nogris Spa — experiencia nocturna tipo lounge; héroe a pantalla ancha con el video del estudio, logotipo dorado sobre el video, servicios en tarjetas desplegables, comparación de paquetes lado a lado y galería en carrusel horizontal. */
+:root {
+  --bg: #1F0C1D;          /* ciruela noche */
+  --bg-2: #2B1229;        /* superficie */
+  --bg-3: #3A1A37;
+  --cream: #F8EEE6;       /* marfil */
+  --muted: #C9B2C3;
+  --gold: #D8B261;        /* dorado del logo, aclarado para fondo oscuro */
+  --gold-deep: #A9822F;
+  --magenta: #EC4A93;     /* rosa del logo */
+  --line: rgba(216, 178, 97, .22);
+  --f-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --f-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--cream); font-family: var(--f-body); font-size: 16.5px; line-height: 1.7; -webkit-font-smoothing: antialiased; font-weight: 400; }
+img, video { max-width: 100%; display: block; }
+a { color: inherit; }
+.wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 400; line-height: 1.1; margin: 0; text-wrap: balance; }
+.script { font-family: var(--f-display); font-style: italic; color: var(--gold); font-weight: 400; letter-spacing: 0; }
+.eyebrow { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 28px; text-decoration: none; font-weight: 600; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; transition: all .25s; border: 1px solid var(--gold); cursor: pointer; border-radius: 2px; }
+.btn-gold { background: linear-gradient(135deg, var(--gold), var(--gold-deep)); color: var(--bg); }
+.btn-gold:hover { filter: brightness(1.1); transform: translateY(-2px); }
+.btn-line { color: var(--gold); background: transparent; }
+.btn-line:hover { background: var(--gold); color: var(--bg); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--magenta); outline-offset: 3px; }
+
+/* Header */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: rgba(31, 12, 29, .82); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding-block: 16px; gap: 20px; }
+.nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; font-weight: 500; }
+.nav ul a { text-decoration: none; color: var(--muted); }
+.nav ul a:hover { color: var(--gold); }
+.brand { display: block; justify-self: center; line-height: 0; }
+.brand img { height: 48px; width: auto; }
+.nav .right { justify-self: end; }
+.nav .btn { padding: 10px 18px; font-size: 12px; }
+
+/* Hero */
+.hero { position: relative; min-height: 640px; display: grid; place-items: center; overflow: hidden; text-align: center; }
+.hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .45; }
+.hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(31,12,29,.35) 0%, rgba(31,12,29,.9) 75%), linear-gradient(to bottom, transparent 60%, var(--bg)); }
+.hero .wrap { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding-block: 72px; }
+.hero-logo { width: min(460px, 88%); height: auto; margin-bottom: 30px; filter: drop-shadow(0 12px 32px rgba(0,0,0,.55)); }
+.hero h1 { font-size: clamp(40px, 5.6vw, 76px); letter-spacing: -.01em; max-width: 14ch; font-weight: 500; }
+.hero h1 .script { display: block; font-size: .5em; margin-bottom: 10px; color: var(--magenta); }
+.hero p { max-width: 36em; color: var(--muted); font-size: 18px; margin: 22px 0 34px; }
+.hero .ctas { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.ornament { display: flex; align-items: center; gap: 14px; color: var(--gold); justify-content: center; }
+.ornament::before, .ornament::after { content: ""; width: 60px; height: 1px; background: var(--gold); opacity: .6; }
+
+/* Marquesina */
+.marquee { border-block: 1px solid var(--line); overflow: hidden; padding-block: 18px; background: var(--bg-2); }
+.marquee-track { display: flex; gap: 48px; width: max-content; animation: slide 38s linear infinite; font-family: var(--f-display); font-style: italic; font-size: 22px; letter-spacing: 0; color: var(--muted); white-space: nowrap; }
+.marquee-track span::after { content: "✦"; color: var(--gold); margin-left: 48px; font-size: 13px; vertical-align: middle; }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+section { padding-block: 100px; }
+.sec-head { text-align: center; margin: 0 auto 56px; max-width: 640px; }
+.sec-head h2 { font-size: clamp(36px, 4.6vw, 58px); margin: 14px 0 16px; }
+.sec-head p { color: var(--muted); margin: 0; }
+
+/* Servicios */
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: start; }
+details.svc { background: var(--bg-2); border: 1px solid var(--line); transition: border-color .25s; min-width: 0; }
+details.svc[open] { border-color: var(--gold); }
+details.svc summary { list-style: none; cursor: pointer; display: block; }
+details.svc summary::-webkit-details-marker { display: none; }
+.svc .cover { aspect-ratio: 16/10; overflow: hidden; position: relative; }
+.svc .cover img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.9); transition: transform .6s; }
+.svc:hover .cover img { transform: scale(1.05); }
+.svc .cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, var(--bg-2), transparent 55%); }
+.svc .head { padding: 0 26px 24px; margin-top: -34px; position: relative; z-index: 1; }
+.svc .head h3 { font-size: 26px; }
+.svc .head p { margin: 6px 0 14px; color: var(--muted); font-size: 15px; }
+.svc .meta { display: flex; justify-content: space-between; align-items: center; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); }
+.svc .meta .plus { width: 30px; height: 30px; border: 1px solid var(--gold); border-radius: 50%; display: grid; place-items: center; font-size: 18px; transition: transform .3s; }
+.svc[open] .meta .plus { transform: rotate(45deg); }
+.svc ul { list-style: none; margin: 0; padding: 4px 26px 22px; border-top: 1px solid var(--line); }
+.svc li { display: flex; justify-content: space-between; gap: 16px; padding-block: 12px; border-bottom: 1px dashed rgba(216,178,97,.15); font-size: 15px; }
+.svc li:last-child { border-bottom: 0; }
+.svc li .n { min-width: 0; }
+.svc li small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+.svc li .p { font-family: var(--f-body); font-weight: 600; color: var(--gold); font-size: 16px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.svc-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 30px; }
+
+/* Paquetes */
+.packs { background: var(--bg-2); border-block: 1px solid var(--line); }
+.compare { display: grid; grid-template-columns: 1fr 1fr; max-width: 940px; margin: 0 auto; border: 1px solid var(--line); }
+.col { padding: 46px 40px; text-align: center; }
+.col + .col { border-left: 1px solid var(--line); }
+.col.premium { background: linear-gradient(180deg, rgba(236,74,147,.14), rgba(216,178,97,.06)); position: relative; }
+.col.premium::before { content: "Recomendado"; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: var(--magenta); color: #fff; font-size: 11px; letter-spacing: .24em; text-transform: uppercase; padding: 6px 14px; font-weight: 600; }
+.col h3 { font-size: 28px; }
+.col .amt { font-family: var(--f-display); font-size: 58px; color: var(--gold); margin: 14px 0 6px; line-height: 1; }
+.col .amt-sub { color: var(--muted); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 28px; }
+.col ul { list-style: none; padding: 0; margin: 0 0 34px; text-align: left; }
+.col li { padding: 11px 0; border-bottom: 1px solid rgba(216,178,97,.12); display: flex; gap: 12px; font-size: 15px; }
+.col li .ic { color: var(--gold); flex: none; }
+.col li.no { color: rgba(201,178,195,.45); text-decoration: line-through; text-decoration-color: rgba(201,178,195,.3); }
+.col li.no .ic { color: rgba(201,178,195,.4); }
+
+/* Galería */
+.strip { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 16px; scrollbar-color: var(--gold) var(--bg-2); }
+.strip figure { flex: 0 0 min(320px, 78%); margin: 0; aspect-ratio: 3/4; scroll-snap-align: start; overflow: hidden; border: 1px solid var(--line); position: relative; }
+.strip img, .strip video { width: 100%; height: 100%; object-fit: cover; }
+.strip figcaption { position: absolute; inset: auto 0 0; padding: 40px 18px 16px; background: linear-gradient(to top, rgba(31,12,29,.9), transparent); font-family: var(--f-display); font-style: italic; font-size: 18px; }
+
+/* Testimonio / cita */
+.quote { text-align: center; max-width: 760px; margin: 0 auto; }
+.quote blockquote { font-family: var(--f-display); font-size: clamp(24px, 3vw, 34px); line-height: 1.35; margin: 18px 0; }
+.quote cite { color: var(--muted); font-style: normal; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; }
+
+/* Contacto */
+.contact { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); }
+.contact .s { color: var(--muted); font-size: 15px; margin-top: 4px; }
+.contact .tel { font-size: 26px; font-variant-numeric: tabular-nums; user-select: all; }
+.contact .lnk { display: inline-block; margin-top: 14px; color: var(--gold); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+.contact .lnk:hover { border-color: var(--gold); }
+.contact > div { padding: 34px 26px; text-align: center; }
+.contact > div + div { border-left: 1px solid var(--line); }
+.contact .k { font-size: 12px; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.contact .v { font-family: var(--f-display); font-size: 20px; }
+.contact .v.ph { color: var(--muted); font-family: var(--f-body); font-style: italic; font-size: 16px; }
+.cta-final { text-align: center; margin-top: 54px; }
+
+/* Mapa */
+.map { position: relative; height: 380px; margin-top: 22px; border: 1px solid var(--line); overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(236,74,147,.18), transparent 34%),
+    repeating-linear-gradient(0deg, transparent 0 58px, rgba(216,178,97,.10) 58px 60px),
+    repeating-linear-gradient(90deg, transparent 0 86px, rgba(216,178,97,.10) 86px 88px),
+    linear-gradient(28deg, transparent 49.6%, rgba(216,178,97,.22) 49.6% 50.4%, transparent 50.4%),
+    var(--bg-2); }
+.map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: invert(.92) hue-rotate(180deg) saturate(.55) brightness(.95); }
+.map .pin { position: absolute; left: 50%; top: 46%; transform: translate(-50%, -100%); width: 46px; filter: drop-shadow(0 8px 14px rgba(0,0,0,.5)); }
+.map.live .pin { display: none; }
+.map-card { position: absolute; left: 20px; bottom: 20px; right: 20px; max-width: 420px; background: rgba(31,12,29,.92); backdrop-filter: blur(8px); border: 1px solid var(--line); padding: 20px 22px; display: flex; flex-direction: column; gap: 4px; }
+.map-card .k { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.map-card .v { font-family: var(--f-display); font-size: 20px; }
+.map-card .s { color: var(--muted); font-size: 15px; }
+.map-card .btn { align-self: flex-start; margin-top: 12px; padding: 11px 18px; font-size: 12px; }
+
+footer { border-top: 1px solid var(--line); padding-block: 40px; margin-top: 100px; }
+footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; color: var(--muted); font-size: 14px; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+.hero .wrap > * { animation: fadeUp 1s cubic-bezier(.2,.7,.2,1) both; }
+.hero .wrap > *:nth-child(2) { animation-delay: .15s; } .hero .wrap > *:nth-child(3) { animation-delay: .3s; } .hero .wrap > *:nth-child(4) { animation-delay: .45s; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } html { scroll-behavior: auto; } }
+
+@media (max-width: 980px) {
+  .nav { grid-template-columns: 1fr auto; }
+  .nav ul { display: none; }
+  .brand { justify-self: start; }
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+  .contact { grid-template-columns: 1fr; }
+  .contact > div + div { border-left: 0; border-top: 1px solid var(--line); }
+  section { padding-block: 76px; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .brand img { height: 38px; }
+  .nav .btn { padding: 8px 12px; font-size: 11px; letter-spacing: .1em; }
+  .hero { min-height: 0; }
+  .hero-logo { width: min(320px, 90%); }
+  .svc-grid, .compare { grid-template-columns: 1fr; }
+  .col + .col { border-left: 0; border-top: 1px solid var(--line); }
+  .col { padding: 44px 22px 36px; }
+  .contact { grid-template-columns: 1fr; }
+  .contact > div + div { border-left: 0; border-top: 1px solid var(--line); }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#paquetes">Paquetes</a></li>
+      <li><a href="#galeria">Galería</a></li>
+    </ul>
+    <a class="brand" href="#inicio"><img src="img/logo-oscuro.png" alt="D'Nogris Spa, inicio"></a>
+    <div class="right"><a class="btn btn-line" href="#contacto">Reservar</a></div>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <video src="img/video.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+    <div class="wrap">
+      <img class="hero-logo" src="img/logo-oscuro.png" alt="D'Nogris Spa">
+      <h1><span class="script">Bienvenida a</span>tu ritual de belleza</h1>
+      <p>Faciales con aparatología, moldeado corporal, uñas, cabello y mirada. Un estudio íntimo donde cada visita se siente como un respiro.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="https://wa.me/529622865893?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20D%27Nogris%20Spa" target="_blank" rel="noopener">Agendar por WhatsApp</a>
+        <a class="btn btn-line" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee"></div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="ornament"><span class="eyebrow">Menú del spa</span></div>
+        <h2>Servicios y precios</h2>
+        <p>Toca una categoría para ver cada tratamiento con su precio.</p>
+      </div>
+      <div class="svc-grid" id="svc"></div>
+      <p class="svc-note">Precios en MXN. Dermapen y alaciados pueden variar según tipo de piel o volumen de cabello.</p>
+    </div>
+  </section>
+
+  <section id="paquetes" class="packs">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="ornament"><span class="eyebrow">Para tu evento</span></div>
+        <h2>Paquetes Fiesta Casual</h2>
+        <p>Llega lista a tu boda, graduación o cena especial con todo resuelto en una sola cita.</p>
+      </div>
+      <div class="compare" id="compare"></div>
+    </div>
+  </section>
+
+  <section id="galeria" style="padding-bottom:40px">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="ornament"><span class="eyebrow">Nuestro trabajo</span></div>
+        <h2>Galería</h2>
+      </div>
+      <div class="strip">
+        <figure><img src="img/unas-rojas.jpg" alt="Uñas acrílicas rojas"><figcaption>Acrílico rojo cereza</figcaption></figure>
+        <figure><video src="img/video.mp4" autoplay muted loop playsinline aria-label="Video del estudio"></video><figcaption>En el estudio</figcaption></figure>
+        <figure><img src="img/facial.jpg" alt="Tratamiento facial con aparatología"><figcaption>Facial con aparatología</figcaption></figure>
+        <figure><img src="img/unas-cafe.jpg" alt="Uñas en tonos café y glitter"><figcaption>Gelish tonos tierra</figcaption></figure>
+        <figure><img src="img/unas-azul.jpg" alt="Uñas francesas azules con dorado"><figcaption>Francés azul y oro</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-block:60px">
+    <div class="quote">
+      <span class="script" style="font-size:30px">Consiéntete</span>
+      <blockquote>“Tu piel, tus manos y tu cabello merecen el mismo cuidado que tú das a los demás.”</blockquote>
+      <cite>D’Nogris Spa</cite>
+    </div>
+  </section>
+
+  <section id="contacto" style="padding-top:40px;padding-bottom:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="ornament"><span class="eyebrow">Visítanos</span></div>
+        <h2>Reserva tu cita</h2>
+      </div>
+      <div class="contact">
+        <div><div class="k">Dirección</div><div class="v">16 Calle Poniente</div><div class="s">entre 2a y 4a Sur, Col. San Sebastián<br>C.P. 30700, Tapachula, Chiapas</div><a class="lnk" href="https://maps.app.goo.gl/APWFGrzFL24qg9G37" target="_blank" rel="noopener">Cómo llegar →</a></div>
+        <div><div class="k">Horario</div><div class="v">Lunes a viernes</div><div class="s">9:00 am a 6:00 pm</div><div class="v" style="margin-top:10px">Sábado</div><div class="s">9:00 am a 5:00 pm</div><div class="s" style="margin-top:10px">Domingo cerrado</div></div>
+        <div><div class="k">Citas y WhatsApp</div><div class="v tel">962 286 5893</div><div class="s">Escríbenos o llámanos para reservar</div><a class="lnk" href="https://www.facebook.com/dnogrisspa" target="_blank" rel="noopener" style="margin-right:14px">Facebook →</a><a class="lnk" href="https://wa.me/529622865893?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20D%27Nogris%20Spa" target="_blank" rel="noopener">Abrir WhatsApp →</a></div>
+      </div>
+      <div class="map" id="mapa">
+        <svg class="pin" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 0C10.7 0 0 10.5 0 23.6 0 41.3 24 64 24 64s24-22.7 24-40.4C48 10.5 37.3 0 24 0z" fill="#EC4A93"/><circle cx="24" cy="23" r="9" fill="#F8EEE6"/></svg>
+        <div class="map-card">
+          <span class="k">Así nos encuentras</span>
+          <span class="v">16 Calle Poniente, Col. San Sebastián</span>
+          <span class="s">Entre 2a y 4a Sur · Tapachula, Chiapas</span>
+          <a class="btn btn-gold" href="https://maps.app.goo.gl/APWFGrzFL24qg9G37" target="_blank" rel="noopener">Abrir en Google Maps</a>
+        </div>
+      </div>
+      <div class="cta-final"><a class="btn btn-gold" href="https://wa.me/529622865893?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20D%27Nogris%20Spa" target="_blank" rel="noopener">Agendar cita por WhatsApp</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-oscuro.png" alt="D'Nogris Spa" style="height:52px;width:auto">
+    <span>16 Calle Poniente, Col. San Sebastián · Tapachula, Chiapas · 962 286 5893 · <a href="https://www.facebook.com/dnogrisspa" target="_blank" rel="noopener" style="color:var(--gold)">Facebook</a></span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  const S = window.SPA, fmt = S.fmt;
+  const cover = { faciales: "facial.jpg", corporal: "facial.jpg", paquetes10: "facial.jpg", unas: "unas-rojas.jpg", cabello: "unas-azul.jpg", cejas: "unas-cafe.jpg" };
+  const pos = { faciales: "center 40%", corporal: "center 75%", paquetes10: "center 20%", unas: "center", cabello: "center", cejas: "center" };
+  document.getElementById("svc").innerHTML = S.categorias.map((c, i) => {
+    const min = Math.min(...c.items.filter(x => !x[3]).map(x => x[1]));
+    return `<details class="svc"${i === 0 ? " open" : ""}>
+      <summary>
+        <div class="cover"><img src="img/${cover[c.id]}" alt="" style="object-position:${pos[c.id]}"></div>
+        <div class="head"><h3>${c.nombre}</h3><p>${c.intro}</p>
+          <div class="meta"><span>${c.items.length} servicios · desde ${fmt(min)}</span><span class="plus">+</span></div></div>
+      </summary>
+      <ul>${c.items.map(([n, p, note, extra]) => `<li><span class="n">${n}${note ? `<small>${note}</small>` : ""}</span><span class="p">${extra ? "+" : ""}${fmt(p)}</span></li>`).join("")}</ul>
+    </details>`;
+  }).join("");
+
+  document.getElementById("compare").innerHTML = S.paquetes.map(p => `
+    <div class="col ${p.destacado ? "premium" : ""}">
+      <h3>${p.nombre.replace("Fiesta Casual ", "")}</h3>
+      <div class="amt">${fmt(p.precio)}</div>
+      <div class="amt-sub">MXN · una visita</div>
+      <ul>${p.incluye.map(i => `<li><span class="ic">✦</span>${i}</li>`).join("")}</ul>
+      <a class="btn ${p.destacado ? "btn-gold" : "btn-line"}" href="#contacto">Reservar</a>
+    </div>`).join("");
+
+  const words = ["Hidrafacial", "Maderoterapia", "Uñas acrílicas", "Alaciado orgánico", "Dermapen", "Pestañas de puntos", "HIFU", "Botox capilar", "Masaje relajante", "Planchado de ceja"];
+  document.getElementById("marquee").innerHTML = [...words, ...words].map(w => `<span>${w}</span>`).join("");
+  // Mapa interactivo: en el sitio publicado se carga Google Maps; en la vista previa de Claude queda la tarjeta.
+  if (!/claude|anthropic/.test(location.hostname)) {
+    const m = document.getElementById("mapa"), f = document.createElement("iframe");
+    f.src = "https://www.google.com/maps?q=14.89923,-92.2695999&z=17&output=embed";
+    f.loading = "lazy"; f.title = "Ubicación de D'Nogris Spa"; f.referrerPolicy = "no-referrer-when-downgrade";
+    m.prepend(f); m.classList.add("live");
+  }
+})();
+</script>
+</body>
+</html>
